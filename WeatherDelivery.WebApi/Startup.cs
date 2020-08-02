@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WeatherDelivery.WebApi.Infrastructure;
+using WeatherDelivery.WebApi.Infrastructure.ApiKeyAuth;
 
 namespace WeatherDelivery.WebApi
 {
@@ -27,6 +29,10 @@ namespace WeatherDelivery.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddAuth();
+
+            services.AddConfiguration(Configuration);
 
             services.AddDependencyInjection();
 
@@ -45,6 +51,7 @@ namespace WeatherDelivery.WebApi
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

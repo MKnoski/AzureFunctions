@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WeatherDelivery.WebApi.Models;
@@ -21,6 +22,7 @@ namespace WeatherDelivery.WebApi.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> InitWeatherDelivery(Delivery delivery)
         {
             _logger.LogInformation($"Weather delivery init - id: {delivery.Id}");
