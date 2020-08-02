@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using System.Threading;
 using System.Threading.Tasks;
 using WeatherDelivery.Sdk.Helpers;
-using WeatherDelivery.WebApi.Models;
+using WeatherDelivery.Sdk.Models;
 
 namespace WeatherDelivery.WebApi.Handlers
 {

@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using System;
 
-namespace WeatherDelivery.WebApi.Models
+namespace WeatherDelivery.Sdk.Models
 {
     public class Delivery : IRequest
     {

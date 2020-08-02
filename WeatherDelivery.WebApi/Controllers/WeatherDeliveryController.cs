@@ -4,7 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using WeatherDelivery.WebApi.Models;
+using WeatherDelivery.Sdk.Models;
 
 namespace WeatherDelivery.WebApi.Controllers
 {
