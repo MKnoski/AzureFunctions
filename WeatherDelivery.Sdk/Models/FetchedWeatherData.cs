@@ -6,14 +6,17 @@ namespace WeatherDelivery.Sdk.Models
 {
     public class FetchedWeatherData
     {
-        public FetchedWeatherData(Guid id, WeatherApiResponse weather)
+        public FetchedWeatherData(Delivery delivery, WeatherApiResponse weather)
         {
-            Id = id;
+            Id = delivery.Id;
             Weather = weather;
+            Delivery = delivery;
         }
 
         public Guid Id { get; }
 
         public WeatherApiResponse Weather { get; }
+
+        public Delivery Delivery { get; }
     }
 }

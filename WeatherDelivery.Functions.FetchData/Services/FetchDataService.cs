@@ -1,15 +1,16 @@
 ﻿using Flurl;
 using Flurl.Http;
+using System;
 using System.Threading.Tasks;
 using WeatherDelivery.Sdk.Models;
 
-namespace WeatherDelivery.Functions.FetchData
+namespace WeatherDelivery.Functions.Services
 {
     public static class FetchDataService
     {
         private const string FetchDataHost = "http://api.openweathermap.org/data/2.5";
 
-        private const string ApiKey = "25b4d3146e296514799c8743105a1324";
+        private static readonly string ApiKey = Environment.GetEnvironmentVariable("OpenWeatherMapApiKey");
 
         public static async Task<WeatherApiResponse> FetchWeatherDataAsync(string location)
         {

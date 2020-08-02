@@ -4,9 +4,10 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Azure.WebJobs.Host;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using WeatherDelivery.Functions.Services;
 using WeatherDelivery.Sdk.Models;
 
-namespace WeatherDelivery.Functions.FetchData
+namespace WeatherDelivery.Functions
 {
     public static class FetchDataFunction
     {
@@ -26,7 +27,7 @@ namespace WeatherDelivery.Functions.FetchData
 
             var weather = await FetchDataService.FetchWeatherDataAsync(delivery.Location);
 
-            var data = new FetchedWeatherData(delivery.Id, weather);
+            var data = new FetchedWeatherData(delivery, weather);
             await documents.AddAsync(data);
         }
     }

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherDelivery.WebApi", "W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherDelivery.Sdk", "WeatherDelivery.Sdk\WeatherDelivery.Sdk.csproj", "{896D1A01-2B78-4D89-AFF8-E2E6A86C0626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherDelivery.Functions.FetchData", "WeatherDelivery.Functions.FetchData\WeatherDelivery.Functions.FetchData.csproj", "{2271D452-A967-4D03-A899-73B811F48950}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherDelivery.Functions", "WeatherDelivery.Functions.FetchData\WeatherDelivery.Functions.csproj", "{2271D452-A967-4D03-A899-73B811F48950}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
